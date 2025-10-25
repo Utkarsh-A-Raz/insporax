@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Insporax — Inspired by Experience</title>
+  <meta name="description" content="Insporax — where every experience sparks inspiration. Join a movement turning ideas into action." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1A4CFF;
+      --white: #FFFFFF;
+      --black: #000000;
+      --muted: #CFCFCF;
+      --glow: rgba(26, 76, 255, 0.4);
+      --max-width: 1200px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img { height: 60px; }
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .nav a:hover { color: var(--blue); }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(26,76,255,0.2), transparent 60%);
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      color: var(--blue);
+      text-shadow: 0 0 20px var(--glow);
+    }
+    .hero p {
+      max-width: 600px;
+      margin-top: 16px;
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+    .btn {
+      margin-top: 28px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, var(--blue), #3e6bff);
+      color: var(--white);
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px var(--glow);
+    }
+
+    section { padding: 80px 20px; max-width: var(--max-width); margin: 0 auto; }
+    h2 { text-align: center; font-size: 2rem; color: var(--blue); margin-bottom: 20px; }
+    p.muted { color: var(--muted); text-align: center; max-width: 700px; margin: 0 auto 40px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 14px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px var(--glow);
+    }
+    .card h3 { color: var(--white); margin-bottom: 10px; }
+    .card p { color: var(--muted); }
+
+    .timeline { display: flex; flex-direction: column; gap: 25px; margin-top: 40px; }
+    .timeline-item { display: flex; align-items: flex-start; gap: 15px; }
+    .dot {
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 15px var(--glow);
+      flex-shrink: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--muted);
+      background: rgba(0,0,0,0.9);
+    }
+    footer a { color: var(--blue); margin: 0 6px; text-decoration: none; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal { opacity: 0; }
+    .reveal.visible { opacity: 1; animation: fadeInUp 0.8s ease forwards; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="/mnt/data/Neon Blue White and Black E-Sports Illustrative Gaming Gaming Logo.png" alt="Insporax Logo">
+    </div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#events">Events</a>
+      <a href="#join">Join</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Inspired by Experience</h1>
+    <p>At Insporax, every story, struggle, and success becomes a spark. We turn raw experience into powerful ideas that shape tomorrow.</p>
+    <button class="btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Discover More</button>
+  </section>
+
+  <section id="about" class="reveal">
+    <h2>About Insporax</h2>
+    <p class="muted">Insporax is a creative platform born from real experiences. We believe learning doesn’t end in classrooms — it thrives in stories, collaboration, and courage to experiment. Our mission is to connect dreamers, doers, and disruptors who learn through living.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Real Voices</h3>
+        <p>We highlight authentic stories that inspire action — from campuses to communities.</p>
+      </div>
+      <div class="card">
+        <h3>Collaborative Growth</h3>
+        <p>Where creativity meets purpose. Join hands to build something extraordinary.</p>
+      </div>
+      <div class="card">
+        <h3>Beyond Theory</h3>
+        <p>We prioritize action, experience, and reflection — because knowledge is lived, not memorized.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="reveal">
+    <h2>From Experience to Impact</h2>
+    <p class="muted">We transform real-world experiences into stories that inspire, educate, and empower others.</p>
+    <div class="timeline">
+      <div class="timeline-item"><div class="dot"></div><div><strong>Campus Dialogues</strong><br><span class="muted">Conversations that turn failures and lessons into shared wisdom.</span></div></div>
+      <div class="timeline-item"><div class="dot"></div><div><strong>Hands-on Workshops</strong><br><span class="muted">Interactive sessions where participants build, test, and reflect in real-time.</span></div></div>
+      <div class="timeline-item"><div class="dot"></div><div><strong>Community Collabs</strong><br><span class="muted">Cross-college collaborations solving meaningful challenges together.</span></div></div>
+    </div>
+  </section>
+
+  <section id="events" class="reveal">
+    <h2>Upcoming Highlights</h2>
+    <div class="grid">
+      <div class="card"><h3>Story Sparks — Nov 12</h3><p>Five-minute stories that redefine inspiration. Students and creators share their lived experiences.</p></div>
+      <div class="card"><h3>Build & Learn — Dec 03</h3><p>A creative jam session to turn raw ideas into actionable prototypes in 48 hours.</p></div>
+      <div class="card"><h3>Echo Talks — Jan 18</h3><p>Intimate fireside conversations with those who dared, failed, and tried again.</p></div>
+    </div>
+  </section>
+
+  <section id="join" class="reveal">
+    <h2>Join the Movement</h2>
+    <p class="muted">Be part of a generation that learns by doing. Host an event, share your story, or collaborate with Insporax.</p>
+    <form action="https://formspree.io/f/xzzkpnwk" method="POST" style="max-width:600px;margin:30px auto;display:flex;flex-direction:column;gap:12px;">
+      <input name="name" placeholder="Your name" required style="padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:transparent;color:var(--white)">
+      <input name="email" type="email" placeholder="Email" required style="padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:transparent;color:var(--white)">
+      <textarea name="message" rows="4" placeholder="Tell us how you'd like to collaborate" style="padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:transparent;color:var(--white)"></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Insporax — Inspired by Experience</p>
+    <p>Follow us <a href="#">LinkedIn</a> · <a href="#">Instagram</a></p>
+  </footer>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
